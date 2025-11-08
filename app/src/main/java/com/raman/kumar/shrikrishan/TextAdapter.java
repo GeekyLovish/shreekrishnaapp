@@ -1,0 +1,100 @@
+package com.raman.kumar.shrikrishan;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.ads.AdView;
+import com.raman.kumar.modals.getaModal.getGeetaModal.Datum;
+
+import java.util.List;
+
+/**
+ * Created by mann on 15/2/18.
+ */
+
+
+public class TextAdapter extends RecyclerView.Adapter<TextAdapter.MyViewHolder> {
+    FragmentTransaction ft;
+    private List<Datum> aratiList;
+    Context mContext;
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView textview1;
+        LinearLayout mainLay;
+        AdView adView;
+        private ItemClickListener clickListener;
+
+        public MyViewHolder(View view) {
+            super(view);
+            textview1 = (TextView) view.findViewById(R.id.textview1);
+            mainLay = (LinearLayout) view.findViewById(R.id.mainLay);
+            adView = view.findViewById(R.id.adView);
+        }
+
+        public void setClickListener(ItemClickListener itemClickListener) {
+            this.clickListener = itemClickListener;
+        }
+    }
+
+    public TextAdapter(List<Datum> arrayList, Context context, FragmentTransaction ft) {
+        this.aratiList = arrayList;
+        this.mContext = context;
+        this.ft = ft;
+    }
+
+    @Override
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.text_row, parent, false);
+        return new MyViewHolder(itemView);
+    }
+
+    @SuppressLint("MissingPermission")
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+        holder.textview1.setText(aratiList.get(position).getTitle());
+
+        /*AdRequest adRequest = new AdRequest.Builder().build();
+        holder.adView.loadAd(adRequest);
+        if (position % 10 == 0) {
+            if (position == 0){
+                holder.adView.setVisibility(View.GONE);
+            }else {
+                holder.adView.setVisibility(View.VISIBLE);
+            }
+        } else {
+            holder.adView.setVisibility(View.GONE);
+        }*/
+
+        holder.mainLay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(mContext, FullScreenTextActivity.class);
+                i.putExtra("content", aratiList.get(position).getContent());
+                i.putExtra("title", aratiList.get(position).getTitle());
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return aratiList.size();
+    }
+
+    public interface ItemClickListener {
+        void onClick(View view, int position, boolean isLongClick);
+    }
+
+
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="horizontal">
+
+            <!-- Replace buttons with ImageViews -->
+            <ImageView
+                android:id="@+id/btnBold"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_bold" />
+
+            <ImageView
+                android:id="@+id/btnItalic"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_italic" />
+
+            <ImageView
+                android:id="@+id/btnUnderline"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_underline" />
+
+            <ImageView
+                android:id="@+id/btnBullet"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_bullets" />
+
+            <ImageView
+                android:id="@+id/btnNumbered"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_numbers" />
+
+            <!-- Alignment Images -->
+            <ImageView
+                android:id="@+id/btnAlignLeft"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_align_left" />
+
+            <ImageView
+                android:id="@+id/btnAlignCenter"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_align_center" />
+
+            <ImageView
+                android:id="@+id/btnAlignRight"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_align_right" />
+
+            <ImageView
+                android:id="@+id/btnAlignJustify"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_align_justify" />
+
+            <!-- Insert Link & Undo/Redo -->
+            <ImageView
+                android:id="@+id/btnInsertLink"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_link" />
+
+            <ImageView
+                android:id="@+id/btnUndo"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_undo" />
+
+            <ImageView
+                android:id="@+id/btnRedo"
+                android:layout_margin="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_redo" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </HorizontalScrollView>
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/richEditor"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#FFFFFF" />
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_11sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_title"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/app_image"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:maxWidth="@dimen/_80sdp"
+            android:src="@drawable/logo_square"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentRight="true"
+            android:maxWidth="@dimen/_80sdp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/app_image"
+            android:maxLines="1"
+            android:text="Testing"
+            android:textColor="#000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@id/app_image"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Testing is awecome"
+            android:textColor="#000"
+            android:textSize="@dimen/_12sdp"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/finalImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_image"
+            android:layout_marginTop="@dimen/_10sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

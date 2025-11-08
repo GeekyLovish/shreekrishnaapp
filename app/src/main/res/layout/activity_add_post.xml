@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ShowImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:src="@drawable/placeholder_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:weightSum="3">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/learnMoreRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Learn More" />
+
+                <RadioButton
+                    android:id="@+id/watchVideoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Watch Video" />
+
+                <RadioButton
+                    android:id="@+id/visitWebRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Visit Website" />
+
+                <RadioButton
+                    android:id="@+id/visitPageRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Visit FB Page" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/adEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ButtonChooseImage"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="left"
+            android:hint="Ad Name"
+            android:inputType="text|textMultiLine|textCapSentences" />
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ButtonChooseImage"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="left"
+            android:hint="Share Link"
+            android:inputType="text|textMultiLine|textCapSentences"
+            android:maxEms="21" />
+        <!--        ImageCaptionEditText-->
+
+        <WebView
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:id="@+id/webViewEditor"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"/>
+
+<!--        <net.dankito.richtexteditor.android.toolbar.AllCommandsEditorToolbar-->
+<!--            android:id="@+id/editorToolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginRight="@dimen/_10sdp"-->
+<!--            android:background="@color/blue" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--            android:layout_marginRight="@dimen/_10sdp">-->
+<!--&lt;!&ndash;-->
+<!--            <jp.wasabeef.richeditor.RichEditor-->
+<!--                android:id="@+id/ImageCaptionEditText"-->
+<!--                style="@style/H1"-->
+<!--      a          android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/margin_150"-->
+<!--                />-->
+<!--&ndash;&gt;-->
+<!--            <net.dankito.richtexteditor.android.RichTextEditor-->
+<!--                android:id="@+id/ImageCaptionEditText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_200sdp"-->
+<!--                style="@style/H1"/>-->
+
+<!--&lt;!&ndash;            <jp.wasabeef.richeditor.RichEditor&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/editor"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="@dimen/_200sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="@style/H1"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@android:color/white" />&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:weightSum="3">
+
+            <CheckBox
+                android:id="@+id/gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gallery" />
+
+            <CheckBox
+                android:id="@+id/amrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amrit" />
+
+            <CheckBox
+                android:id="@+id/picsByParts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pictures By Parts"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/ButtonChooseImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ShowImageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_weight=".5"
+                android:text="Choose Image" />
+
+            <Button
+                android:id="@+id/ButtonUploadImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ImageNameEditText"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_weight=".5"
+                android:background="@color/blue"
+                android:text="Upload image"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

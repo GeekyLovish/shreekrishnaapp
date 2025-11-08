@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raman.kumar.shrikrishan.FullScrenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/setAsWallpaper"
+        android:layout_height="match_parent"
+        android:background="#808080"
+         />
+        <TextView
+            android:id="@+id/textLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""/>
+    <Button
+        android:id="@+id/setAsWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Set as wallpaper"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+         />
+    </RelativeLayout>
+</RelativeLayout>

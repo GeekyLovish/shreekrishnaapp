@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="#B5000000"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:text="Shri Krishna"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+<RelativeLayout
+    android:id="@+id/videoLayout"
+    android:layout_below="@+id/title"
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scaleType="centerCrop" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/white_play"/>
+</RelativeLayout>
+
+    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="FULL_WIDTHx250"
+        android:layout_below="@+id/videoLayout"
+        ads:adUnitId="@string/test_keys" />-->
+</RelativeLayout>

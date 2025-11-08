@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dragView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_songAlbumbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4d000000"
+        android:scaleType="centerCrop"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/slidepanelchildtwo_topviewone"
+                layout="@layout/slidepanelchildtwo_topviewone"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                android:layout_height="@dimen/_70sdp"/>
+
+            <include
+                android:id="@+id/slidepanelchildtwo_topviewtwo"
+                layout="@layout/slidepanelchildtwo_topviewtwo"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/space"
+                android:layout_height="?attr/actionBarSize"
+                android:visibility="invisible" />
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_playLayout">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image_songAlbumbg_mid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?colorPrimary"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/new_updated_logo"
+                        android:visibility="visible" />
+
+                    <!--                    <pl.droidsonroids.gif.GifImageView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_gravity="bottom"-->
+                    <!--                        android:src="@drawable/image_gif" />-->
+
+                    <View
+                        android:id="@+id/vBgLike"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#60000000"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ic_launcher_round"
+                    android:scaleType="center"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/bottom_playLayout"
+                layout="@layout/slidepanelchildtwo_bottomview"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

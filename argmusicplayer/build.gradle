@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.arges.sepan.argmusicplayer'
+    compileSdk 34
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+
+    //new
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1' // Use the latest version //new
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1' // Use the latest version //new
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1' // Latest version
+    androidTestImplementation 'androidx.test:runner:1.6.2' // Latest version
+
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}

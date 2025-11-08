@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+<!--        <item name="android:fitsSystemWindows">true</item>-->
+<!--        <item name="android:windowSoftInputMode">adjustResize</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Set parent theme as app theme. -->
+    <style name="DialogTheme" parent="android:Theme.DeviceDefault.DialogWhenLarge">
+        <!--<item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--    <style name="ReactImageButton">-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--        <item name="android:background">@android:color/transparent</item>-->
+    <!--        <item name="android:layout_weight">@dimen/one</item>-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:layout_gravity">center</item>-->
+    <!--        <item name="android:scaleType">fitCenter</item>-->
+    <!--        <item name="android:adjustViewBounds">true</item>-->
+    <!--        <item name="android:cropToPadding">false</item>-->
+    <!--        <item name="android:padding">@dimen/dimen7dp</item>-->
+    <!--    </style>-->
+
+    <style name="ReactImageButton">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_width">@dimen/margin_50</item>
+        <item name="android:layout_height">40dp</item>
+
+    </style>
+
+    <dimen name="margin_60">60dp</dimen>
+
+    <style name="H1">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:lineSpacingExtra">@dimen/_3sdp</item>
+    </style>
+
+    <style name="RoundImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

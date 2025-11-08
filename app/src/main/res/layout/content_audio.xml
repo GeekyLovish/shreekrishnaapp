@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.raman.kumar.shrikrishan.ImageActivity"
+    android:background="@drawable/red_backgrounf"
+    tools:showIn="@layout/activity_audio">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="FULL_WIDTHx70"
+        ads:adUnitId="@string/test_keys" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/adView"
+        android:layout_above="@+id/uploadImage"
+        android:scrollbars="vertical" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:id="@+id/uploadImage"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:text="UPLOAD IMAGE"/>
+    </LinearLayout>
+</RelativeLayout>

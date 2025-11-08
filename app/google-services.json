@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "746677104201",
+    "firebase_url": "https://shri-krishan.firebaseio.com",
+    "project_id": "shri-krishan",
+    "storage_bucket": "shri-krishan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746677104201:android:5853d030446abab5409998",
+        "android_client_info": {
+          "package_name": "com.raman.kumar.shrikrishan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746677104201-70bt91ul8u0cm9iiancle8i81kruvj98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raman.kumar.shrikrishan",
+            "certificate_hash": "93fa4eaf9a0cb3ff4f14427d6c71149cbede9a62"
+          }
+        },
+        {
+          "client_id": "746677104201-4188rf9mkd94vp7o318d2392gd54ljgg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEfMRjb6uFJggzeymNeqM8_aWhztrO0-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746677104201-2uag64qosa0oid20freb717nufli0jcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context="com.raman.kumar.shrikrishan.AudioActivity">
+
+<!--
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expanded="false"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/mainLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.raman.kumar.shrikrishan.AudioActivity"
+        >
+        <com.arges.sepan.argmusicplayer.PlayerViews.ArgPlayerLargeView
+            android:id="@+id/argmusicplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            >
+        </com.arges.sepan.argmusicplayer.PlayerViews.ArgPlayerLargeView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/argmusicplayer"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+
+    <!-- Persistent BottomSheet -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!-- Collapsed View (like Spotify's bar) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="?attr/colorPrimary">
+
+            <ImageView
+                android:id="@+id/album_art"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo_square" />
+
+            <TextView
+                android:id="@+id/song_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="Now Playing"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/play_pause"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_play"
+                 />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cancelBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_cancel" />
+        </LinearLayout>
+
+        <!-- Expanded View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?attr/colorPrimary"
+            android:padding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E0E0E0" />
+
+                <ImageView
+                    android:layout_margin="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:src="@drawable/logo_square"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <SeekBar
+                        android:layout_marginTop="24dp"
+                        android:id="@+id/seek_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:thumbTint="@color/blue"
+                        android:progressTint="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_reached"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+                        app:layout_constraintStart_toStartOf="@id/seek_bar"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+                        app:layout_constraintEnd_toEndOf="@id/seek_bar"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/btnPrevious"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_previous"
+                        android:contentDescription="Previous" />
+
+                    <ImageView
+                        android:layout_marginStart="12dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/playBtn2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_play"
+                        android:contentDescription="Play Button" />
+
+                    <ImageView
+                        android:layout_marginStart="12dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_next"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_next"
+                        android:contentDescription="Next" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+            <!-- Additional content for expanded view -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

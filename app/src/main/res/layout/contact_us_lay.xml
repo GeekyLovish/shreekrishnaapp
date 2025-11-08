@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:background="@drawable/card_view_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+
+            android:layout_height="@dimen/_45sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center_horizontal"
+                    android:text="Contact Us"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/statusView"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/cardview_dark_background"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/errorView"
+
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:text="Mr. Raman S/O Mr. Rajbir, Village Rajehri \nPost-Nachron, Tehsil- Radaur \nYamunanagar, \nHaryana.\nMobile No :-09466660442\nEmail :-ramankumar407@gmail.com"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/buttonlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+
+
+
+
+            <RelativeLayout
+
+                android:id="@+id/okLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".6">
+
+                <Button
+                    android:id="@+id/okButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:text="OK"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

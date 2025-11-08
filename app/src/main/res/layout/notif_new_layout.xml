@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_trans"
+    android:id="@+id/layout">
+
+    <RelativeLayout
+        android:layout_alignParentEnd="true"
+        android:id="@+id/fl_albumArt"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/logo_square"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/logo_square"
+            android:id="@+id/albumNotifArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/fadeOverlay"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@android:color/transparent"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_toLeftOf="@id/fl_albumArt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp">
+
+                <TextView
+                    android:text="@string/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"/>
+
+                <TextView
+                    android:id="@+id/songTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/songAlbum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/songArtist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/prevNotifBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_previous"/>
+
+                <ImageView
+                    android:id="@+id/pauseNotifBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_pause"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    android:id="@+id/progressNotifNew"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="@android:color/white"
+                    android:indeterminate="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_play"/>
+
+                <ImageView
+                    android:id="@+id/playNotifBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_play"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/nextNotifBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_next"/>
+
+                <ImageView
+                    android:id="@+id/closeNotifBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/ic_cancel"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

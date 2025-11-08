@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".adminPanel.addPosts.AudioPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/ButtonChooseAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageNameEditText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_weight=".5"
+            android:text="Choose Audio" />
+
+        <Button
+            android:id="@+id/ButtonAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageNameEditText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_weight=".5"
+            android:background="@color/blue"
+            android:text="Upload Audio"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:weightSum="3">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ringtoneCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ringtone" />
+
+            <RadioButton
+                android:id="@+id/bhajanCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bhajan" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:hint="Enter Audio Title" />
+
+    <EditText
+        android:editable="false"
+        android:id="@+id/durationEditText"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:hint="Enter duration" />
+
+</LinearLayout>

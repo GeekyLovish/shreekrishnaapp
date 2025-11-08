@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical"
+    tools:context=".adminPanel.addPosts.AddGitaActivity">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:hint="Enter Title"
+        android:singleLine="true" />
+
+<!--    <com.raman.kumar.customClasses.RichTextEditorView-->
+<!--        android:id="@+id/richTextEditorView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="600dp"/>-->
+    <WebView
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/webViewEditor"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"/>
+
+
+    <!--    <net.dankito.richtexteditor.android.toolbar.AllCommandsEditorToolbar-->
+<!--        android:id="@+id/editorToolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_35sdp"-->
+<!--        android:layout_marginLeft="@dimen/_10sdp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:layout_marginRight="@dimen/_10sdp"-->
+<!--        android:background="@color/blue" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="@dimen/_10sdp"-->
+<!--        android:layout_marginRight="@dimen/_10sdp">-->
+
+<!--        <net.dankito.richtexteditor.android.RichTextEditor-->
+<!--            android:id="@+id/contentEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_350sdp"-->
+<!--            android:minHeight="@dimen/_80sdp" />-->
+
+<!--    </LinearLayout>-->
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageNameEditText"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/blue"
+        android:text="Upload"
+        android:textColor="@color/white" />
+
+</LinearLayout>

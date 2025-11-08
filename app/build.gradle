@@ -1,0 +1,162 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+
+
+android {
+    namespace = "com.raman.kumar.shrikrishan"
+    compileSdk 35
+    ndkVersion '29.0.13846066 rc3'
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        applicationId = "com.raman.kumar.shrikrishan"
+        minSdkVersion 26
+        targetSdk 35
+        versionCode 86
+        versionName "5.1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // or "17" based on your needs
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk.debugSymbolLevel = "FULL"
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+
+    viewBinding {
+        enabled = true
+    }
+    lint {
+        checkReleaseBuilds false
+    }
+    buildToolsVersion '35.0.0'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation project(':argmusicplayer')
+    implementation 'androidx.media3:media3-exoplayer:1.4.1'
+    implementation 'com.google.firebase:firebase-firestore:25.1.1'
+    implementation 'androidx.activity:activity:1.9.3'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1' // Use the latest version //new
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1' // Use the latest version //new
+
+    //compile 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.facebook.android:facebook-android-sdk:5.8.0'
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.8.0"
+
+    annotationProcessor 'androidx.annotation:annotation:1.9.1'
+    implementation 'androidx.palette:palette-ktx:1.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.8.0'
+    implementation 'com.koushikdutta.ion:ion:3.0.8'
+    implementation 'com.google.firebase:firebase-appcheck-safetynet:16.1.2'
+
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+    implementation 'com.firebaseui:firebase-ui-database:8.0.0'
+    implementation 'com.firebase:firebase-client-android:2.5.2'
+    implementation 'com.google.firebase:firebase-storage:21.0.1'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:24.1.0'
+
+    implementation 'com.github.curioustechizen.android-ago:library:1.4.0'
+
+    implementation 'com.airbnb.android:lottie:2.5.4'
+
+
+    implementation 'net.dankito.richtexteditor:richtexteditor-android:1.0'   //for html formmttting
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.9.23"
+
+
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4@aar'
+    implementation 'com.google.android.gms:play-services-ads:23.6.0'
+    implementation 'com.github.devendroid:ReadMoreOption:1.0.2'
+    implementation 'androidx.work:work-runtime:2.10.0'
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    // Lifecycle ViewModel with Coroutines
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.6'
+
+
+    implementation 'jp.wasabeef:richeditor-android:2.0.0'
+    implementation 'com.google.android.play:integrity:1.4.0'
+    implementation 'androidx.browser:browser:1.8.0'
+
+    implementation 'com.google.firebase:firebase-appcheck:18.0.0'
+
+
+    implementation 'com.google.android.play:app-update:2.1.0'
+
+    // For Kotlin users also import the Kotlin extensions library for Play In-App Update:
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0' // Core coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0' // Coroutines for Android
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

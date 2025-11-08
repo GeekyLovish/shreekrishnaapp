@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2sp"
+    android:background="#B5000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/editImageView"
+        android:text="Shri Krishna"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/editImageView"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_18sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/menu"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/white_play" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">श्री कृष्णा</string>
+    <string name="appname">श्री कृष्णा</string>
+
+    <string-array name="reaction">
+        <item>Like</item>
+        <item>Love</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="all">All</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
+    <string name="images">Images</string>
+    <string name="app_id">2321765961380433</string>
+    <string name="title_activity_audio">AudioActivity</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="title_activity_full_screen_text">FullScreenTextActivity</string>
+    <string name="title_activity_full_screen">FullScrenActivity</string>
+    <string name="title_activity_new_gallery">NewGalleryActivity</string>
+
+    <string name="new_gallery">Pictures By Parts</string>
+    <string name="title_activity_video">Video</string>
+    <string name="facebook_app_id">2321765961380433</string>
+
+
+    <string name="DataBaseName">RandomPlayer</string>
+    <string name="DataBaseName_Version">1.0</string>
+    <string name="descBackward">Prev Button</string>
+    <string name="descForward">Next Button</string>
+    <string name="timeProgressDefault">0:00</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="internet_check">Please Check Internet Check</string>
+    <string name="loading">Loading</string>
+    <string name="forgotPasswordUnderline"><u>Forgot Password?</u></string>
+    <string name="login"><u>Login with OTP</u></string>
+    <string name="lowerSignIn"><u>Sign In</u></string>
+    <string name="underlineSignUp"><u>Sign Up</u></string>
+    <string name="like">Like</string>
+
+
+    <string name="users_node">users</string>
+    <string name="user_account_settings_node">user_account_settings</string>
+    <string name="user_photos_node">user_photos</string>
+    <string name="user_videos_node">user_videos</string>
+    <string name="videos_node">videos</string>
+    <string name="photos_node">photos</string>
+    <string name="usernameField">username</string>
+    <string name="fieldLikes">likes</string>
+    <string name="fieldComments">postComments</string>
+    <string name="fieldComment">comment</string>
+    <string name="dateField">date_added</string>
+    <string name="emailField">email</string>
+    <string name="users_id">user_id</string>
+    <string name="displayNameField">display_name</string>
+    <string name="descriptionField">description</string>
+    <string name="websiteField">website</string>
+    <string name="phoneNoField">phone_number</string>
+    <string name="profilePhotoField">profile_photo</string>
+    <string name="node_followers">followers</string>
+    <string name="node_following">following</string>
+
+    <string name="reply">Reply</string>
+    <string name="replies">Reply</string>
+    <string name="write_reply">Write a reply...</string>
+    <string name="title_text">🌿🌿श्री कृष्णा🌿🌿</string>
+    <string name="title_text_1">🌿श्री कृष्णा🌿</string>
+    <string name="title_text_2">श्री कृष्णा</string>
+    <string name="graphic_text">Enter content here</string>
+    <string name="share_link">🌿🌿श्री कृष्णा🌿🌿
+श्री कृष्णा नवीनतम वॉलपेपर, भजन, चित्रों, श्री कृष्णा के अलग-अलग अवतारों आदि के लिए इस भगवान श्री कृष्णा एेप को चेक करें: https://play.google.com/store/apps/details?id=com.raman.kumar.shrikrishan बस इस लिंक पर क्लिक करें !! धन्यवाद</string>
+    <string name="notification_channel_id">CHANNEL_5424N94L</string>
+    <string name="ringtone_set_success">Ringtone set success</string>
+    <string name="notification_set_success">Notification set success</string>
+    <string name="operation_failed">Operation failed</string>
+
+    <string name="storage_permission_denied">Storage Permission Denied. Please allow storage permission to choose image.</string>
+    <string name="camera_permission_denied">Camera Permission Denied. Please allow camera permission to take picture.</string>
+    <string name="unable_to_crop_image">Unable to crop image</string>
+    <string name="image_resizing">Image Resizing...</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <!--&lt;!&ndash;-->
+    <!--    <string name="ca_pub_app">ca-app-pub-8877546392246070~5389005626</string>-->
+    <!--&ndash;&gt;-->
+    <!--    <string name="ca_pub_app">ca-app-pub-8877546392246070~5435016660</string>-->
+    <!--&lt;!&ndash;-->
+    <!--    <string name="test_keys">ca-app-pub-8877546392246070/7823597277</string>-->
+    <!--&ndash;&gt;-->
+    <!--    <string name="test_keys">ca-app-pub-8877546392246070/5819241613</string>-->
+    <!--&lt;!&ndash;    <string name="test_keys">ca-app-pub-3940256099942544/6300978111</string>&ndash;&gt;-->
+
+
+    <string name="ca_pub_app">ca-app-pub-8877546392246070~5389005626</string>
+    <string name="test_keys">ca-app-pub-8877546392246070/1382443395</string>
+</resources>
